@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Video from "../components/blocks/video";
+import Video from "../components/blocks/Video";
 import settings from "../content/settings.json";
 
 
