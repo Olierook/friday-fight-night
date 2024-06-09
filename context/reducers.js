@@ -7,8 +7,8 @@ export const initialState = {
   isSmall: true,
   isMedium: false,
   isBig: false,
-  colorTheme1234: darkTheme,
-  color1234: {
+  colorTheme1234: "darkTheme",
+  colors1234: {
     defaultTheme,
     nightTheme,
     brightTheme,

@@ -3,22 +3,22 @@ import { useState } from "react";
 
 
 export const useFirebaseValue = (string, defaultValue) => {
-  const {db, ref, set, onValue} = useDb();
-  const [value, setValue] = useState(defaultValue);
-  const thisRef = ref(db, string);
+    const {db, ref, set, onValue} = useDb();
+    const [value, setValue] = useState(defaultValue);
+    const thisRef = ref(db, string);
 
-  onValue(thisRef, (e) => {
-    const data = e.val();
-    if ( JSON.stringify(data) !== JSON.stringify(value) ) {
-      setValue(data);
-    }
-  });
+    onValue(thisRef, (e) => {
+        const data = e.val();
+        if ( JSON.stringify(data) !== JSON.stringify(value) ) {
+            setValue(data);
+        }
+    });
 
-  const updateValue = (v) => {
-    set(thisRef, v);
-  };
+    const updateValue = (v) => {
+        set(thisRef, v);
+    };
 
-  return [value, updateValue];
+    return [value, updateValue];
 };
 
 /*Shortcuts for common usage

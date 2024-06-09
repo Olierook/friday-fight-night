@@ -1,4 +1,4 @@
-import { useStoreValue } from "./useStoreValue"
+import { useStoreValue } from "./useStoreValue";
 
 const useColorTheme = () => {
     const [colorTheme, setColorTheme] = useStoreValue("colorTheme1234");
@@ -9,12 +9,12 @@ const useColorTheme = () => {
         if (options.includes(c)) {
             setColorTheme(c);
         } else {
-            setColorTheme('defaultTheme');
+            setColorTheme("defaultTheme");
         }
-    }
+    };
 
     return [colorTheme, updateColorTheme];
-}
+};
 
 
 export default useColorTheme;
