@@ -16,7 +16,6 @@ import "@fontsource/fira-code/600.css";
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
-import useColor from "../hooks/useColor";
 
 
 /**
@@ -32,7 +31,7 @@ export default function MyApp({ Component, pageProps }) {
             <StoreProvider>
                 <UserProvider>
                     <DatabaseProvider>
-						<GlobalStyles>
+                        <GlobalStyles>
                             <Component {...pageProps} />
                             <Analytics />
                         </GlobalStyles>

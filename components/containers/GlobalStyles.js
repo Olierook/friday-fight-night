@@ -1,18 +1,19 @@
 import useColor from "../../hooks/useColor";
 
-const GlobalStyles = () => {;
+const GlobalStyles = ({children}) => {
     const colors = useColor();
 
-  return (
-    <>
-        <style jsx global>{`
+    return (
+        <>
+            {children}
+            <style jsx global>{`
                 html, body { 
                   background: ${colors.background}
                 }
             `}
-        </style>
-    </>
-  )
+            </style>
+        </>
+    );
 };
 
-export default GlobalStyles
+export default GlobalStyles;
