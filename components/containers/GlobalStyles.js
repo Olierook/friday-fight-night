@@ -8,7 +8,9 @@ const GlobalStyles = ({children}) => {
             {children}
             <style jsx global>{`
                 html, body { 
-                  background: ${colors.background}
+                  background: ${colors.background};
+                  height: 100%;
+                  margin: 0;
                 }
             `}
             </style>

@@ -3,21 +3,40 @@ import settings from "../content/settings.json";
 import { Suspense } from "react";
 import VideoBackground from "../components/blocks/VideoBackground";
 import { list } from "@vercel/blob";
+import useColor from "../hooks/useColor";
 
 
 
 
 export default function HomePage({videoUrl}) {
+    const colors = useColor();
     return (
         <>
             <Head>
                 <title>{settings.basetitle}</title>
             </Head>
-            <div className="hoi" style={{width: "100vw", height: "100vh"}}>
+            <div className="videocontainer">
                 <Suspense fallback={<p>Loading video...</p>}>
                     <VideoBackground url={videoUrl} />
                 </Suspense>
             </div>
+            <div className="header"/>
+            <style jsx>{`
+                .videocontainer {
+                    width: 100svw;
+                    height: 100svh;
+                    position: fixed;
+                    display: flex; 
+                    justify-content: center; 
+                    align-items: center;
+                }
+                .header {
+                    width: 100%;
+                    height: 30px;
+                    {/* background: ${colors.background}; */}
+                    position: absolute;
+                }
+                `}</style>
         </>
     );
 }
