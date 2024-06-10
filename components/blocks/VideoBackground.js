@@ -8,6 +8,7 @@ const VideoBackground = ({ url }) => {
             preload="auto" 
             autoPlay
             loop
+            playsInline
             muted
         >
             <source src={url} type="video/mp4" />
