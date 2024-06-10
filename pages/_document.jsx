@@ -26,7 +26,9 @@ export default function Document() {
                     href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
                     rel="stylesheet"
                 />
-
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+                <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet"/>
             </Head>
             <body>
                 <Main />
