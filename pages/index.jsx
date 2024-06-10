@@ -130,7 +130,7 @@ export default function HomePage({videoUrl}) {
                     align-items: center;
                     text-align: center;
                     border-radius: 4px;
-                    box-shadow: 5px 5px 5px ${colors.backgroundDark};
+                    box-shadow: 7px 4px 14px 3px ${colors.backgroundDark};
                 }
                 .title {
                     grid-area: title;
