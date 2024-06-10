@@ -50,7 +50,7 @@ export default function HomePage({videoUrl}) {
                     <div className="plane tickets" onClick={gosite(ticketlink)}  >GET TICKETS NOW</div>
                     <div className="plane location">Patronaat Haarlem</div>
                     <div className="plane content">
-                        <h1>Lorem ipsum dolor sit amet</h1>
+                        <h1 className="germania">Lorem ipsum dolor sit amet</h1>
                         <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     
@@ -187,8 +187,11 @@ export default function HomePage({videoUrl}) {
                 }
 
                 .content > h1 {
-                    font-weight: 700;
-                    align-self: baseline
+                    font-size: 18px;
+                    margin: 6px 0 0 0;
+                    align-self: baseline;
+                    color: ${colors.primary};
+                    text-shadow: 1px 1px 7px ${colors.backgroundDark};
                 }
 
                 .cc-small > .soc {
