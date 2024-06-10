@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
-import useAPI from "../../hooks/useApi";
 
- 
 
 const VideoBackground = ({ url }) => {
  
