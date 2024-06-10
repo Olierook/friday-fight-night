@@ -25,6 +25,14 @@ export default function HomePage({videoUrl}) {
     const [isMedium] = useStoreValue("isMedium");
     const colors = useColor();
 
+    const ticketlink = "https://www.patronaat.nl";
+    const gwinsta = "https://www.instagram.com/goldwolffband/";
+    const bhinsta = "https://www.instagram.com/bokshuis/";
+    const gwsite = "https://goldwolffband.com";
+    const bhsite = "https://bokshuis.nl/";
+
+    const gosite = (url) => () => window.open(url, "_blank");
+        
     return (
         <>
             <Head>
@@ -39,7 +47,7 @@ export default function HomePage({videoUrl}) {
                 <div className={`contentcontainer ${isSmall ? "cc-small" : isMedium ? "cc-medium" : "cc-big"}`}>
                     <div className="plane title germania">FRIDAY FIGHT NIGHT</div>
                     <div className="plane date">6/9/2024</div>
-                    <div className="plane tickets">GET TICKETS NOW</div>
+                    <div className="plane tickets" onClick={gosite(ticketlink)}  >GET TICKETS NOW</div>
                     <div className="plane location">Patronaat Haarlem</div>
                     <div className="plane content">
                         <h1>Lorem ipsum dolor sit amet</h1>
@@ -47,10 +55,10 @@ export default function HomePage({videoUrl}) {
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     
                     </div>
-                    <div className="plane soc instagw" onMouseEnter={() => setGw(true)} onMouseLeave={() => setGw(false)} ><FontAwesomeIcon icon={lib.faInstagram} spin={gw}/><p>Goldwölff</p></div>
-                    <div className="plane soc sitegw" onMouseEnter={() => setGw2(true)} onMouseLeave={() => setGw2(false)}><FontAwesomeIcon icon={lib2.faGlobe} spin={gw2}/><p>Goldwölff</p></div>
-                    <div className="plane soc sitebh" onMouseEnter={() => setBh2(true)} onMouseLeave={() => setBh2(false)}><FontAwesomeIcon icon={lib2.faGlobe} spin={bh2}/><p>Bokshuis</p></div>
-                    <div className="plane soc instabh" onMouseEnter={() => setBh(true)} onMouseLeave={() => setBh(false)} ><FontAwesomeIcon icon={lib.faInstagram} spin={bh}/><p>Bokshuis</p></div>
+                    <div className="plane soc instagw" onClick={gosite(gwinsta)} onMouseEnter={() => setGw(true)} onMouseLeave={() => setGw(false)} ><FontAwesomeIcon icon={lib.faInstagram} spin={gw}/><p>Goldwölff</p></div>
+                    <div className="plane soc sitegw" onClick={gosite(gwsite)} onMouseEnter={() => setGw2(true)} onMouseLeave={() => setGw2(false)}><FontAwesomeIcon icon={lib2.faGlobe} spin={gw2}/><p>Goldwölff</p></div>
+                    <div className="plane soc sitebh" onClick={gosite(bhsite)} onMouseEnter={() => setBh2(true)} onMouseLeave={() => setBh2(false)}><FontAwesomeIcon icon={lib2.faGlobe} spin={bh2}/><p>Bokshuis</p></div>
+                    <div className="plane soc instabh" onClick={gosite(bhinsta)} onMouseEnter={() => setBh(true)} onMouseLeave={() => setBh(false)} ><FontAwesomeIcon icon={lib.faInstagram} spin={bh}/><p>Bokshuis</p></div>
 
                 </div>
             </div>
