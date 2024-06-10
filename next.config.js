@@ -1,7 +1,7 @@
 /* eslint-disable no-undef*/
 module.exports = {
-  compiler: {
+    compiler: {
     // Enables the styled-components SWC transform
-    styledComponents: true
-  }
+        styledComponents: true
+    }
 };
