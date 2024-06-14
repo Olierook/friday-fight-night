@@ -65,8 +65,8 @@ export default function HomePage({videoUrl}) {
 
 
                 .videocontainer {
-                    width: 100svw;
-                    height: 100svh;
+                    width: 100vw;
+                    height: 100vh;
                     position: fixed;
                     display: flex; 
                     justify-content: center; 
