@@ -50,10 +50,9 @@ export default function HomePage({videoUrl}) {
                     <div className="plane tickets" onClick={gosite(ticketlink)}  >GET TICKETS NOW</div>
                     <div className="plane location">Patronaat Haarlem</div>
                     <div className="plane content">
-                        <h1 className="germania">Lorem ipsum dolor sit amet</h1>
-                        <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    
+                        <h1 className="germania">Heavy Music, Heavy Matches</h1>
+                        <p>Welkom bij de 2e editie van Friday Fight Night! Na een succesvolle eerste editie in de Nobel te Leiden met het NK Superzwaargewicht en optredens van onder andere Dikke Dennis en de Røckers, zijn we terug met een nog spectaculairder evenement. Deze keer kun je genieten van optredens van Hang Youth, Bongloard en meer, wederom gecombineerd met spannende bokswedstrijden.</p>
+                        <p>Het concept van Friday Fight Night is simpel: Heavy Music, Heavy Matches. Dit unieke evenement wordt georganiseerd door een samenwerking van Heavy Rock &apos;n Roll-band Goldwölff en het Bokshuis. Mis het niet!</p>
                     </div>
                     <div className="plane soc instagw" onClick={gosite(gwinsta)} onMouseEnter={() => setGw(true)} onMouseLeave={() => setGw(false)} ><FontAwesomeIcon icon={lib.faInstagram} spin={gw}/><p>Goldwölff</p></div>
                     <div className="plane soc sitegw" onClick={gosite(gwsite)} onMouseEnter={() => setGw2(true)} onMouseLeave={() => setGw2(false)}><FontAwesomeIcon icon={lib2.faGlobe} spin={gw2}/><p>Goldwölff</p></div>
@@ -63,6 +62,8 @@ export default function HomePage({videoUrl}) {
                 </div>
             </div>
             <style jsx>{`
+
+
                 .videocontainer {
                     width: 100svw;
                     height: 100svh;
@@ -70,6 +71,7 @@ export default function HomePage({videoUrl}) {
                     display: flex; 
                     justify-content: center; 
                     align-items: center;
+
                 }
                 .containercontainer {
                     height: 100%;
@@ -123,8 +125,8 @@ export default function HomePage({videoUrl}) {
                         / 1fr 400px 250px 150px 150px 1fr;
                 }
                 .plane {
-                    background: ${colors.backgroundDark}99;
-                    color: ${colors.backgroundText};
+                    background-image: radial-gradient(circle at 100%, ${colors.backgroundDark}66, ${colors.backgroundDark}CC);
+                    color: ${colors.backgroundDarkText};
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -134,10 +136,35 @@ export default function HomePage({videoUrl}) {
                 }
                 .title {
                     grid-area: title;
-                    background: ${colors.primary}99;
+                    background-color: ${colors.primary}99;
+                    background-image: radial-gradient(circle at center center, ${colors.tertiary}99, ${colors.primary}99), repeating-radial-gradient(circle at center center, ${colors.secondary}, ${colors.tertiary}, 10px, transparent 18%, transparent 10px);
+                    background-blend-mode: multiply;
+                    background-position: center;
                     color: ${colors.primaryText};
                     font-size: 30px;
+                    animation: colorChange 40s infinite alternate linear;
                 }
+
+                @keyframes colorChange {
+                    from {
+                        background-size: 100% 100%;
+                    }     
+                    25% {
+                        background-size: 150% 200%;
+                        }
+                    
+                    50% {
+                        background-size: 200% 100%;
+                        }
+                                  
+                    75% {
+                        background-size: 150% 200%;
+                        }
+                    
+                    to {
+                        background-size: 100% 100%;
+                        }
+                    }
                 .cc-big > .title {
                     font-size: 100px;
                 }
@@ -149,8 +176,9 @@ export default function HomePage({videoUrl}) {
 
                 .tickets {
                     grid-area: tickets;
-                    background: ${colors.tertiaryLight}99;
-                    color: ${colors.tertiaryLightText};
+                    background: ${colors.secondary}99;
+                    background-image: linear-gradient(217deg, ${colors.primary}66, ${colors.secondary}99);
+                    color: ${colors.secondaryText};
                     font-size: 16px;
                     font-weight: 800;
                     transition: all 500ms;
@@ -162,8 +190,8 @@ export default function HomePage({videoUrl}) {
 
                 .tickets:hover {
                     grid-area: tickets;
-                    background: ${colors.secondary}99;
-                    color: ${colors.secondaryText};
+                    background: ${colors.tertiary}99;
+                    color: ${colors.tertiaryText};
                     font-size: 16px;
                     font-weight: 800;
                     cursor: pointer;
@@ -178,7 +206,7 @@ export default function HomePage({videoUrl}) {
                 }
                 .content {
                     grid-area: content;
-                    background: ${colors.background}99;
+                    background-image: radial-gradient(circle at 100%, ${colors.backgroundDark}66, ${colors.background}CC);
                     padding: 15px 15px;
                     text-align: justify;
                     flex-direction: column;
@@ -190,13 +218,14 @@ export default function HomePage({videoUrl}) {
                     font-size: 18px;
                     margin: 6px 0 0 0;
                     align-self: baseline;
-                    color: ${colors.primary};
+                    color: ${colors.secondary};
                     text-shadow: 1px 1px 7px ${colors.backgroundDark};
                 }
 
                 .cc-small > .soc {
-                    background: ${colors.tertiaryLight}66;
-                    color: ${colors.tertiaryLightText};
+                    background: ${colors.secondary}66;
+                    background-image: linear-gradient(217deg, ${colors.backgroundDark}66, ${colors.secondary}66);
+                    color: ${colors.secondaryText};
                 }
                 .soc {
                     font-size: 30px;
@@ -205,8 +234,8 @@ export default function HomePage({videoUrl}) {
                     transition: all 500ms;
                 }
                 .soc:hover {
-                    background: ${colors.secondary}99;
-                    color: ${colors.secondaryText};
+                    background: ${colors.tertiary}99;
+                    color: ${colors.tertiaryText};
                     cursor: pointer;
                 }
                 .soc > p {
