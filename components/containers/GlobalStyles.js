@@ -1,6 +1,7 @@
-import useColor from "../../hooks/useColor";
+import useColor from "../../hooks/color/useColor";
 
-const GlobalStyles = ({children}) => {
+
+const GlobalStyles = ({ children }) => {
     const colors = useColor();
 
     return (
@@ -21,6 +22,27 @@ const GlobalStyles = ({children}) => {
                     font-weight: 400;
                     font-style: normal;
                 }
+                @keyframes sizeMorph {
+                    from {
+                        background-size: 100% 100%;
+                    }     
+                    25% {
+                        background-size: 150% 200%;
+                        }
+                    
+                    50% {
+                        background-size: 200% 100%;
+                        }
+                                  
+                    75% {
+                        background-size: 150% 200%;
+                        }
+                    
+                    to {
+                        background-size: 100% 100%;
+                        }
+                    }
+
             `}
             </style>
         </>

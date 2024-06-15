@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function useMediaQuery(query) {
     const getMatches = (query) => {
-    // Prevents SSR issues
+        // Prevents SSR issues
         if (typeof window !== "undefined") {
             return window.matchMedia(query).matches;
         }
@@ -28,7 +28,7 @@ function useMediaQuery(query) {
         return () => {
             matchMedia.removeEventListener("change", handleChange);
         };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [query]);
 
     return matches;

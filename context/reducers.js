@@ -1,4 +1,4 @@
-import { defaultTheme, nightTheme, brightTheme, darkTheme } from "../lib/colors";
+import { brightTheme, darkTheme, defaultTheme, nightTheme } from "../lib/schemes/colors";
 
 
 
@@ -19,16 +19,16 @@ export const initialState = {
 
 export const reducer = (state, action) => {
     switch (action.type) {
-    case "TEST": {
+        case "TEST": {
 
-        return {
-            ...initialState
-        };
-    }
-    default:
-        return {
-            ...initialState, ...action
-        };
+            return {
+                ...initialState
+            };
+        }
+        default:
+            return {
+                ...initialState, ...action
+            };
     }
 };
 

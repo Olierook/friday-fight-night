@@ -1,15 +1,15 @@
-import { useDb } from "../context/dbContext";
 import { useState } from "react";
+import { useDb } from "./../../context/dbContext";
 
 
 export const useFirebaseValue = (string, defaultValue) => {
-    const {db, ref, set, onValue} = useDb();
+    const { db, ref, set, onValue } = useDb();
     const [value, setValue] = useState(defaultValue);
     const thisRef = ref(db, string);
 
     onValue(thisRef, (e) => {
         const data = e.val();
-        if ( JSON.stringify(data) !== JSON.stringify(value) ) {
+        if (JSON.stringify(data) !== JSON.stringify(value)) {
             setValue(data);
         }
     });

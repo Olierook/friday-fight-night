@@ -1,12 +1,12 @@
 
-import useMediaQuery from "./useMediaQuery";
 import { useEffect } from "react";
-import { useStore } from "./../context/Store";
+import { useStore } from "../../context/Store";
+import useMediaQuery from "./useMediaQuery";
 const useIsDesktop = () => {
     const matches = useMediaQuery("(min-width: 900px)");
-    const [,dispatch] = useStore();
+    const [, dispatch] = useStore();
     useEffect(() => {
-        dispatch({isDesktop: matches});
+        dispatch({ isDesktop: matches });
     }, [matches]);
 };
 

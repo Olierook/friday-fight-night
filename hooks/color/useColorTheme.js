@@ -1,4 +1,4 @@
-import { useStoreValue } from "./useStoreValue";
+import { useStoreValue } from "../data/useStoreValue";
 
 const useColorTheme = () => {
     const [colorTheme, setColorTheme] = useStoreValue("colorTheme1234");

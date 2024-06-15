@@ -1,12 +1,10 @@
-import { useStore } from "../context/Store";
+import { useStore } from "../../context/Store";
+import { colors } from "../../lib/schemes/colors";
 import useColorTheme from "./useColorTheme";
-import { colors } from "../lib/colors";
 
 const useColor = (string) => {
     const [colorTheme] = useColorTheme();
-    console.log({colorTheme});
-    const [{colors1234: {[colorTheme]: colorSet}}] = useStore();
-    console.log({colorSet});
+    const [{ colors1234: { [colorTheme]: colorSet } }] = useStore();
 
     if (string) {
         return colorSet?.[string] || colors[string];
