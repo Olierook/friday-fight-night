@@ -17,8 +17,9 @@ const ResponsiveGridContainer = ({ children }) => {
                 gap: 15px;
                 margin: auto;
 
-                }
-                .cc-small {
+            }
+            .cc-small {
+                height: initial;
                 padding: 15px;
                 grid-template:
                     [row3-start] "empty empty empty empty" 20px [row3-end]
@@ -29,8 +30,8 @@ const ResponsiveGridContainer = ({ children }) => {
                     [row5-start] "space space space space" 1fr [row5-end]
                     [row6-start] "instagw sitegw sitebh instabh" 75px [row6-end]
                     / 1fr 1fr 1fr 1fr;
-                }
-                .cc-medium {
+            }
+            .cc-medium {
                 align-self: center;
                 padding: 10svh 0;
                 grid-template:
@@ -40,8 +41,8 @@ const ResponsiveGridContainer = ({ children }) => {
                     [row6-start] "empty content instagw sitegw sitebh instabh space" 100px [row6-end]
                     [row2-start] "empty content tickets tickets tickets tickets space" min-content [row2-end]
                     / 1fr 225px 75px 75px 75px 75px 1fr;
-                }
-                .cc-big {
+            }
+            .cc-big {
                 align-self: center;
                 padding: 10svh 0;
                 grid-template:
@@ -51,7 +52,7 @@ const ResponsiveGridContainer = ({ children }) => {
                     [row6-start] "empty content location sitegw sitebh space" 100px [row6-end]
                     [row2-start] "empty content tickets tickets tickets space" min-content [row2-end]
                     / 1fr 400px 250px 150px 150px 1fr;
-                }
+            }
                             
             `}</style>
         </div>
