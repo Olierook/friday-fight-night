@@ -46,9 +46,9 @@ const InformationTiles = () => {
         <AbsoluteFullSizeCenterContainer>
             <ResponsiveGridContainer>
                 <div className="plane title germania" onClick={goToSite(eventLink)}>FRIDAY FIGHT NIGHT</div>
-                <div className="plane date">6/9/2024</div>
+                <div className="plane date" onClick={goToSite(eventLink)}>6/9/2024</div>
                 <div className="plane tickets" onClick={goToSite(ticketlink)}  >GET TICKETS NOW</div>
-                <div className="plane location">Patronaat Haarlem</div>
+                <div className="plane location" onClick={goToSite(eventLink)}>Patronaat Haarlem</div>
                 <div className="plane content">
                     <h1 className="germania">Heavy Music, Heavy Matches</h1>
                     <p>Welkom bij de 2e editie van Friday Fight Night! Na een succesvolle eerste editie in de Nobel te Leiden met het NK Superzwaargewicht en optredens van onder andere Dikke Dennis en de Røckers, zijn we terug met een nog spectaculairder evenement. Deze keer kun je genieten van optredens van Hang Youth, Bongloard en meer, wederom gecombineerd met spannende bokswedstrijden.</p>
@@ -94,7 +94,8 @@ const InformationTiles = () => {
                 .date {
                     grid-area: date;
                     font-size: 13px;
-                    font-weight: 700
+                    font-weight: 700;
+                    transition: all 500ms;
                 }
 
                 .tickets {
@@ -119,9 +120,8 @@ const InformationTiles = () => {
                 .location {
                     grid-area: location;
                     font-size: 13px;
-                    font-weight: 700
-
-
+                    font-weight: 700;
+                    transition: all 500ms;
                 }
                 .content {
                     grid-area: content;
@@ -153,6 +153,14 @@ const InformationTiles = () => {
                     color: ${colors.tertiaryText};
                     cursor: pointer;
                 }
+
+                .date:hover, .location:hover {
+                    background: ${colors.tertiary}99;
+                    color: ${colors.tertiaryText};
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+
                 .soc > p {
                     font-size: 12px;
                 }
