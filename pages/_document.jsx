@@ -20,7 +20,7 @@ export default function Document() {
                 <meta property="og:title" content={settings.basetitle} />
                 <meta property="og:url" content={website} />
                 <meta property="og:image" content={website + "/ogimage.jpg"} />
-                <meta property="og:image" content={website + "/Banner8.jpg"} />
+                <meta property="og:image" content={website + "/ogsquare.jpg"} />
                 <meta property="og:type" content="website" />
                 <meta name="theme-color" content="black" />
                 <link
