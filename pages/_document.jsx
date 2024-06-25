@@ -16,19 +16,20 @@ export default function Document() {
             <Head>
                 <meta charSet="utf-8" />
                 <meta name="description" content={settings.description} />
-                <link rel="icon" href="favicon/favicon.ico"/>
-                <meta property="og:title" content={settings.basetitle}/>
+                <link rel="icon" href="favicon/favicon.ico" />
+                <meta property="og:title" content={settings.basetitle} />
                 <meta property="og:url" content={website} />
                 <meta property="og:image" content={website + "/ogimage.jpg"} />
-                <meta property="og:type" content="website"/>	
+                <meta property="og:image" content={website + "/Banner8.jpg"} />
+                <meta property="og:type" content="website" />
                 <meta name="theme-color" content="black" />
                 <link
                     href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
                     rel="stylesheet"
                 />
-                <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-                <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet"/>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+                <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet" />
             </Head>
             <body>
                 <Main />

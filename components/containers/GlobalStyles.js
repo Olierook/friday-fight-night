@@ -28,20 +28,21 @@ const GlobalStyles = ({ children }) => {
                     }     
                     25% {
                         background-size: 150% 200%;
-                        }
+                    }
                     
                     50% {
                         background-size: 200% 100%;
-                        }
+                    }
                                   
                     75% {
                         background-size: 150% 200%;
-                        }
+                    }
                     
                     to {
                         background-size: 100% 100%;
-                        }
                     }
+                }
+
 
             `}
             </style>

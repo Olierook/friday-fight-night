@@ -1,7 +1,7 @@
 
-import { useState, useEffect, createContext, useContext } from "react";
-import { createFirebaseApp } from "../firebase/clientApp"; 
-import { getDatabase, ref, set, onValue } from "firebase/database";
+import { getDatabase, onValue, ref, set } from "firebase/database";
+import { createContext, useContext } from "react";
+import { createFirebaseApp } from "../firebase/clientApp";
 
 export const DbContext = createContext();
 
@@ -9,9 +9,10 @@ export default function DbContextComp({ children }) {
     const app = createFirebaseApp();
     const db = getDatabase(app);
 
+    console.log({ DbContext, app, db });
 
     return (
-        <DbContext.Provider value={{db, ref, set, onValue}}>
+        <DbContext.Provider value={{ db, ref, set, onValue }}>
             {children}
         </DbContext.Provider>
     );

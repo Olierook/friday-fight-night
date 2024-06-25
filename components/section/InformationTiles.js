@@ -16,17 +16,36 @@ const InformationTiles = () => {
 
     const colors = useColor();
 
-    const ticketlink = "https://www.patronaat.nl";
+    const ticketlink = "https://www.ticketmaster.nl/event/307151";
+    const eventLink = "https://patronaat.nl/event/friday-fright-night-boxing-06-09-24/";
     const gwinsta = "https://www.instagram.com/goldwolffband/";
     const bhinsta = "https://www.instagram.com/bokshuis/";
     const gwsite = "https://goldwolffband.com";
     const bhsite = "https://bokshuis.nl/";
 
 
+    /*
+        Zeg maar dag tegen je standaard vrijdagavond in de kroeg, want op vrijdag 6 september 2024 gaan er klappen vallen! Meerdere boksmatches zullen er plaatsvinden van onder andere boksgyms uit Haarlem, Leiden en omstreken, terwijl het gitaargeweld tussen de wedstrijden van het podium schalt.
+
+        Friday Fight Night is een unieke combinatie van boksen en muziek, georganiseerd door Bokshuis en Goldwölff.
+
+        Met de slagzin ‘Heavy Matches, Heavy Music’ is het overduidelijk wat je staat te wachten:
+
+        Een fantastische line-up van bands:
+
+        Hang Youth
+        Goldwölff
+        Bongloard
+        Eskalatie 
+
+        Met daarnaast op de planning meer dan tien boksmatches en vier bands die elkaar afwisselen in samenwerking met het Bokshuis & de Nederlandse Boksbond.
+
+    */
+
     return (
         <AbsoluteFullSizeCenterContainer>
             <ResponsiveGridContainer>
-                <div className="plane title germania">FRIDAY FIGHT NIGHT</div>
+                <div className="plane title germania" onClick={goToSite(eventLink)}>FRIDAY FIGHT NIGHT</div>
                 <div className="plane date">6/9/2024</div>
                 <div className="plane tickets" onClick={goToSite(ticketlink)}  >GET TICKETS NOW</div>
                 <div className="plane location">Patronaat Haarlem</div>
@@ -61,6 +80,14 @@ const InformationTiles = () => {
                     color: ${colors.primaryText};
                     font-size: 30px;
                     animation: sizeMorph 40s infinite alternate linear;
+                    transition: all 500ms;
+                }
+                .title:hover {
+                    background-color: ${colors.secondary}99;
+                    background-image: radial-gradient(circle at center center, ${colors.secondary}99, ${colors.tertiary}99), repeating-radial-gradient(circle at center center, ${colors.tertiary}, ${colors.primary}, 10px, transparent 18%, transparent 10px);
+                    color: ${colors.secondaryText};
+                    font-size: 2em;
+                    cursor: pointer;
                 }
 
                 
@@ -88,7 +115,6 @@ const InformationTiles = () => {
                     font-size: 16px;
                     font-weight: 800;
                     cursor: pointer;
-
                 }
                 .location {
                     grid-area: location;
@@ -99,7 +125,7 @@ const InformationTiles = () => {
                 }
                 .content {
                     grid-area: content;
-                    background-image: radial-gradient(circle at 100%, ${colors.backgroundDark}66, ${colors.background}CC);
+                    background-image: radial-gradient(circle at 100%, ${colors.background}88, ${colors.backgroundDark}FF);
                     padding: 15px 15px;
                     text-align: justify;
                     flex-direction: column;
@@ -160,6 +186,15 @@ const InformationTiles = () => {
                 .cc-big > .title {
                     font-size: 100px;
                 }
+
+                .cc-big > .title:hover {
+                    background-color: ${colors.tertiary}99;
+                    background-image: radial-gradient(circle at center center, ${colors.tertiary}99, ${colors.primary}99), repeating-radial-gradient(circle at center center, ${colors.primary}, ${colors.secondary}, 10px, transparent 18%, transparent 10px);
+                    color: ${colors.tertiaryText};
+                    font-size: 110px;
+                    cursor: pointer;
+                }
+
                     
                     `}
             </style>

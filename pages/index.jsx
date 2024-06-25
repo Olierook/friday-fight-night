@@ -4,11 +4,14 @@ import InformationTiles from "../components/section/InformationTiles";
 import VideoBackground from "../components/video/VideoBackground";
 import settings from "../content/settings.json";
 import useSetBreakpoints from "../hooks/screensize/useSetBreakpoints";
+import { useFirebaseValue } from "./../hooks/data/useFirebaseValue";
 
 
 
 export default function HomePage({ videoUrl }) {
     useSetBreakpoints(600, 1100);
+    const [test] = useFirebaseValue("test");
+    console.log({ test });
 
 
     return (
