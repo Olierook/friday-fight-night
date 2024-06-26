@@ -17,7 +17,7 @@ const InformationTiles = () => {
     const colors = useColor();
 
     const ticketlink = "https://www.ticketmaster.nl/event/307151";
-    const eventLink = "https://patronaat.nl/event/friday-fright-night-boxing-06-09-24/";
+    const eventLink = "https://patronaat.nl/event/friday-fight-night-boxing-06-09-24/";
     const gwinsta = "https://www.instagram.com/goldwolffband/";
     const bhinsta = "https://www.instagram.com/bokshuis/";
     const gwsite = "https://goldwolffband.com";
