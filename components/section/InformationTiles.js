@@ -93,7 +93,7 @@ const InformationTiles = () => {
                 
                 .date {
                     grid-area: date;
-                    font-size: 19px;
+                    font-size: 15px;
                     transition: all 500ms;
                 }
 
@@ -117,7 +117,7 @@ const InformationTiles = () => {
                 }
                 .location {
                     grid-area: location;
-                    font-size: 19px;
+                    font-size: 15px;
                     transition: all 500ms;
                 }
                 .content {
@@ -156,7 +156,7 @@ const InformationTiles = () => {
                     background: ${colors.tertiary}99;
                     color: ${colors.tertiaryText};
                     cursor: pointer;
-                    font-size: 22px;
+                    font-size: 20px;
                 }
 
                 .soc > p {
