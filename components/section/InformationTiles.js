@@ -93,7 +93,7 @@ const InformationTiles = () => {
                 
                 .date {
                     grid-area: date;
-                    font-size: 20px;
+                    font-size: 19px;
                     transition: all 500ms;
                 }
 
@@ -117,7 +117,7 @@ const InformationTiles = () => {
                 }
                 .location {
                     grid-area: location;
-                    font-size: 20px;
+                    font-size: 19px;
                     transition: all 500ms;
                 }
                 .content {
