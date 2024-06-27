@@ -45,12 +45,12 @@ const InformationTiles = () => {
     return (
         <AbsoluteFullSizeCenterContainer>
             <ResponsiveGridContainer>
-                <div className="plane title germania" onClick={goToSite(eventLink)}>FRIDAY FIGHT NIGHT</div>
-                <div className="plane date" onClick={goToSite(eventLink)}>6/9/2024</div>
-                <div className="plane tickets" onClick={goToSite(ticketlink)}  >GET TICKETS NOW</div>
-                <div className="plane location" onClick={goToSite(eventLink)}>Patronaat Haarlem</div>
+                <div className="plane title ffn" onClick={goToSite(eventLink)}>FRIDAY FIGHT NIGHT</div>
+                <div className="plane date avenir" onClick={goToSite(eventLink)}>6/9/2024</div>
+                <div className="plane tickets ffn" onClick={goToSite(ticketlink)}  >GET TICKETS NOW</div>
+                <div className="plane location avenir" onClick={goToSite(eventLink)}>Patronaat Haarlem</div>
                 <div className="plane content">
-                    <h1 className="germania">Heavy Music, Heavy Matches</h1>
+                    <h1 className="hardway">Heavy Music<span className="avenir">,</span> Heavy Matches</h1>
                     <p>Welkom bij de 2e editie van Friday Fight Night! Na een succesvolle eerste editie in de Nobel te Leiden met het NK Superzwaargewicht en optredens van onder andere Dikke Dennis en de Røckers, zijn we terug met een nog spectaculairder evenement. Deze keer kun je genieten van optredens van Hang Youth, Bongloard en meer, wederom gecombineerd met spannende bokswedstrijden.</p>
                     <p>Het concept van Friday Fight Night is simpel: Heavy Music, Heavy Matches. Dit unieke evenement wordt georganiseerd door een samenwerking van Heavy Rock &apos;n Roll-band Goldwölff en het Bokshuis. Mis het niet!</p>
                 </div>
@@ -93,8 +93,7 @@ const InformationTiles = () => {
                 
                 .date {
                     grid-area: date;
-                    font-size: 13px;
-                    font-weight: 700;
+                    font-size: 20px;
                     transition: all 500ms;
                 }
 
@@ -103,7 +102,7 @@ const InformationTiles = () => {
                     background: ${colors.secondary}99;
                     background-image: linear-gradient(217deg, ${colors.primary}66, ${colors.secondary}99);
                     color: ${colors.secondaryText};
-                    font-size: 16px;
+                    font-size: 20px;
                     font-weight: 800;
                     transition: all 500ms;
                 }
@@ -113,14 +112,12 @@ const InformationTiles = () => {
                     grid-area: tickets;
                     background: ${colors.tertiary}99;
                     color: ${colors.tertiaryText};
-                    font-size: 16px;
-                    font-weight: 800;
+                    font-size: 22px;
                     cursor: pointer;
                 }
                 .location {
                     grid-area: location;
-                    font-size: 13px;
-                    font-weight: 700;
+                    font-size: 20px;
                     transition: all 500ms;
                 }
                 .content {
@@ -134,8 +131,8 @@ const InformationTiles = () => {
                 }
 
                 .content > h1 {
-                    font-size: 18px;
-                    margin: 6px 0 0 0;
+                    font-size: 10px;
+                    margin: 6px 0 -15px 0;
                     align-self: baseline;
                     color: ${colors.secondary};
                     text-shadow: 1px 1px 7px ${colors.backgroundDark};
@@ -143,6 +140,7 @@ const InformationTiles = () => {
 
 
                 .soc {
+                    font-family: "Avenir";
                     font-size: 30px;
                     flex-direction: column;
                     gap: 5px;
@@ -158,7 +156,7 @@ const InformationTiles = () => {
                     background: ${colors.tertiary}99;
                     color: ${colors.tertiaryText};
                     cursor: pointer;
-                    font-size: 20px;
+                    font-size: 22px;
                 }
 
                 .soc > p {
